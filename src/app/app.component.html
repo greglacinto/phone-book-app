@@ -9,14 +9,14 @@
       <input type="text" name="search"  class="form-control" placeholder="Search for contact by name..">
       <span class="glyphicon glyphicon-search form-control-feedback"></span>
   </div>
-  <div class="container mb-3" *ngIf="contact">
-      <ul class="list-group" >
+  <div class="container mb-3" *ngIf="contactkeys">
+      <ul class="list-group" *ngFor="let contact of contactkeys">
           <li class="list-group-item d-flex flex-row justify-content-between align-items-center">
-              <div>
-                  
-                  
-              </div>
-              
+            <div>
+              <h5 class="m-0 pb-2">
+                  {{contact | titlecase}}
+              </h5>
+            </div>
           </li>
       </ul>
   </div>   

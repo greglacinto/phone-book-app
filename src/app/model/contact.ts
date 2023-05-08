@@ -6,3 +6,11 @@ export interface Contact {
     relation: string,
   
 }
+
+export interface ContactList {
+  [id: string]: any
+}
+
+export interface ContactKeys {
+  name: string
+}
